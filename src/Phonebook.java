@@ -5,6 +5,10 @@ public class Phonebook {
 
     public HashMap<String, String> phonebook;
 
+    public Phonebook() {
+        this.phonebook = new HashMap<>();
+    }
+
     public void add(String name, String number) {
         this.phonebook.put(name, number);
     }
@@ -13,7 +17,7 @@ public class Phonebook {
         this.phonebook.remove(name);
     }
 
-    public String findNmae(String number) {
+    public String findName(String number) {
         for (Map.Entry<String, String> entry : this.phonebook.entrySet()) {
             if (entry.getValue().equals(number)) {
                 return entry.getKey();
