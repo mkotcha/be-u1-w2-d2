@@ -22,11 +22,9 @@ public class Es1 {
         for (int i = 0; i < num; i++) {
             System.out.println("insert string number " + (i + 1));
             str = scanner.nextLine();
-            if (wordSet.contains(str)) {
+            if (!wordSet.add(str)) {
                 System.out.println(str + " already inserted");
                 duplicatedSet.add(str);
-            } else {
-                wordSet.add(str);
             }
         }
         System.out.println("duplicated words: " + duplicatedSet);
