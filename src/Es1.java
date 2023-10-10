@@ -7,7 +7,7 @@ public class Es1 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int num = -1, i = 0;
+        int num = -1;
         String str = "";
         while (num < 0) {
             System.out.println("insert a number");
@@ -19,16 +19,14 @@ public class Es1 {
         }
         HashSet<String> wordSet = new HashSet<String>();
         HashSet<String> duplicatedSet = new HashSet<String>();
-        while (i < num) {
+        for (int i = 0; i < num; i++) {
             System.out.println("insert string number " + (i + 1));
             str = scanner.nextLine();
             if (wordSet.contains(str)) {
                 System.out.println(str + " already inserted");
                 duplicatedSet.add(str);
-                i++;
             } else {
                 wordSet.add(str);
-                i++;
             }
         }
         System.out.println("duplicated words: " + duplicatedSet);
